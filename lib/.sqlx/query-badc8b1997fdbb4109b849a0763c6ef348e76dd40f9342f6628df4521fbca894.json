@@ -1,0 +1,62 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT u.id, u.name, u.email, u.address, u.role_id, r.name as role_name, u.created_at, u.updated_at\n            FROM users as u\n            INNER JOIN roles as r\n            ON u.role_id = r.id;\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "email",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "address",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 4,
+        "name": "role_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 5,
+        "name": "role_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 6,
+        "name": "created_at",
+        "type_info": "Timestamp"
+      },
+      {
+        "ordinal": 7,
+        "name": "updated_at",
+        "type_info": "Timestamp"
+      }
+    ],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "badc8b1997fdbb4109b849a0763c6ef348e76dd40f9342f6628df4521fbca894"
+}

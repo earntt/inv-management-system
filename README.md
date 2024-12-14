@@ -1,11 +1,17 @@
-# inv-mgt-platform
+# Inventory Management System - Backend
 
-## running a web server (local)
+This project is the backend for an **Inventory Management System**, developed during my internship in **2024**. The backend service is built using **Rust** with the **Axum** framework, and **PostgreSQL** for database management. The project provides API endpoints to handle product and order data, focusing on efficient inventory tracking, order management, and user authentication.
 
+---
+
+## initialize database
+up docker-compose
 ```sh
-$ cargo run
-$ cargo watch -x run
+cp .env.example .env
+docker-compose up -d
 ```
+
+---
 
 ## sqlx prepare & migration
 
@@ -22,10 +28,15 @@ sqlx migrate add -r {migration_name}
 sqlx migrate run
 ```
 
+---
 
-## initialize database
-up docker-compose
+## running a web server (local)
+
 ```sh
-cp .env.example .env
-docker-compose up -d
+$ cargo run
+$ cargo watch -x run
 ```
+
+---
+
+
